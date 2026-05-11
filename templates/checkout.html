@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Checkout - KBS Bakery</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<h1>✅ Checkout</h1>
+
+{% if cart %}
+    <p>Your order is ready!</p>
+    <h2>Total Amount: ₹{{ total }}</h2>
+
+    <form action="/payment" method="POST">
+        <input type="text" name="customer_name" placeholder="Enter your name" required><br><br>
+        <input type="text" name="address" placeholder="Enter delivery address" required><br><br>
+        <input type="text" name="phone" placeholder="Enter phone number" required><br><br>
+
+        <button type="submit">Continue to Payment</button>
+    </form>
+{% else %}
+    <p>Your cart is empty.</p>
+{% endif %}
+
+<br><br>
+<a href="/cart">⬅ Back to Cart</a>
+
+</body>
+</html>

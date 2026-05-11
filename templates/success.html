@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Order Success - KBS Bakery</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<h1>🎉 Order Placed Successfully!</h1>
+
+<p>Thank you for ordering from KBS Bakery.</p>
+<p>Your cakes and sweets will be delivered soon 🍰🍬</p>
+
+<p>Payment Method: {{ payment_method }}</p>
+
+<a href="/"><button>Back to Home</button></a>
+
+</body>
+</html>

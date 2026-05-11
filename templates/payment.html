@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payment - KBS Bakery</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<h1>💳 Payment</h1>
+
+<h2>Total Amount: ₹{{ total }}</h2>
+
+<form action="/place_order" method="POST">
+    <label>Select Payment Method:</label><br><br>
+
+    <input type="radio" name="payment_method" value="Cash on Delivery" required>
+    Cash on Delivery<br><br>
+
+    <input type="radio" name="payment_method" value="Card Payment">
+    Card Payment<br><br>
+
+    <input type="radio" name="payment_method" value="UPI">
+    UPI<br><br>
+
+    <button type="submit">Pay Now</button>
+</form>
+
+<br>
+<a href="/checkout">⬅ Back to Checkout</a>
+
+</body>
+</html>
