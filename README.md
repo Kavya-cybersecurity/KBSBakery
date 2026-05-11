@@ -205,3 +205,5 @@ This project was developed for academic learning purposes to understand Flask we
 # Conclusion
 
 KBS Bakery successfully demonstrates the implementation of a dynamic bakery ordering system using Flask and SQLite. The project integrates frontend and backend technologies to provide a complete user ordering experience while maintaining product inventory and order management functionality.
+
+proffesor: @Chargershub
